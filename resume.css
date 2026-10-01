@@ -915,79 +915,34 @@
 
 @media (max-width: 650px) {
 
-  .resume-page .nav {
-    min-height: 72px;
-  }
-
-  .resume-page .brand img {
-    width: 42px;
-    height: 42px;
-  }
-
-  .resume-page .logo {
-    font-size: 1.25rem;
-  }
-
-  .resume-page .nav-dropdown {
-    width: 100%;
-  }
-
-  .resume-page .nav-dropdown-toggle {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .resume-page .dropdown-menu {
-    position: static;
-
-    width: 100%;
-    margin-top: 6px;
-    padding: 4px 0 4px 15px;
-
-    transform: none;
-
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-
-    display: none;
-  }
-
-  .resume-page .nav-dropdown:hover .dropdown-menu,
-  .resume-page .nav-dropdown:focus-within .dropdown-menu {
-    display: block;
-    transform: none;
-  }
-
-  .resume-page .dropdown-menu::before {
-    display: none;
-  }
-
-  .resume-page .dropdown-menu a {
-    color: var(--resume-main);
-  }
-
-  .resume-page .resume-hero-actions {
+  .education-card {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    gap: 20px;
   }
 
-  .resume-page .resume-primary-btn,
-  .resume-page .resume-secondary-btn {
+  .education-main {
+    gap: 8px;
     width: 100%;
   }
 
-  .resume-page .experience-item {
-    padding: 26px 22px;
+  .education-logo {
+    width: 45px;
+    height: 45px;
   }
 
-  .resume-page .technical-skills {
-    grid-template-columns: 1fr;
+  .education-logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .education-details {
+    align-items: flex-start;
+    text-align: left;
   }
 
 }
-
 
 @media (max-width: 450px) {
 
@@ -1009,4 +964,60 @@
     justify-content: center;
   }
 
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.education-main {
+  display: flex;
+  align-items: center;
+  gap: 5.5%;
+  min-width: 0;
+}
+
+.education-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.education-logo img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+
+.education-content {
+  margin: 0;
+  padding: 0;
+}
+
+.education-content h3 {
+  margin: 0 0 8px;
+}
+
+.education-school {
+  margin: 0;
+}
+
+.education-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+  text-align: right;
 }
