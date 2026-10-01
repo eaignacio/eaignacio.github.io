@@ -915,35 +915,36 @@
 
 @media (max-width: 650px) {
 
-  .education-card {
-    display: flex;
+  .resume-page .education-card {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
 
-  .education-main {
-    gap: 8px;
+  .resume-page .education-main {
     width: 100%;
+    gap: 8px;
   }
 
-  .education-logo {
+  .resume-page .education-logo {
     width: 45px;
     height: 45px;
+    flex-basis: 45px;
   }
 
-  .education-logo img {
+  .resume-page .education-logo img {
     width: 45px;
     height: 45px;
+    max-width: 45px;
+    max-height: 45px;
   }
 
-  .education-details {
+  .resume-page .education-details {
     align-items: flex-start;
     text-align: left;
   }
 
 }
-
 @media (max-width: 450px) {
 
   .resume-page .container {
@@ -966,58 +967,55 @@
 
 }
 
-.education-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
+/* =========================================================
+   EDUCATION LOGO
+========================================================= */
 
-.education-main {
+.resume-page .education-main {
   display: flex;
   align-items: center;
-  gap: 5.5%;
+  gap: 10px;
   min-width: 0;
 }
 
-.education-logo {
+.resume-page .education-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+
   width: 50px;
   height: 50px;
+
+  flex: 0 0 50px;
   margin: 0;
   padding: 0;
 }
 
-.education-logo img {
+.resume-page .education-logo img {
   display: block;
+
   width: 50px;
   height: 50px;
+
+  max-width: 50px;
+  max-height: 50px;
+
   object-fit: contain;
+
   margin: 0;
   padding: 0;
 }
 
-.education-content {
+.resume-page .education-content {
+  min-width: 0;
   margin: 0;
   padding: 0;
 }
 
-.education-content h3 {
+.resume-page .education-content h3 {
   margin: 0 0 8px;
 }
 
-.education-school {
+.resume-page .education-school {
   margin: 0;
-}
-
-.education-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-  flex-shrink: 0;
-  text-align: right;
 }
