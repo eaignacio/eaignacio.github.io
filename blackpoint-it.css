@@ -1,0 +1,638 @@
+/* =========================================================
+   BLACKPOINT IT PROJECT PAGE
+   Page-specific styles
+   ========================================================= */
+
+
+/* =========================================================
+   PROJECT HERO
+   ========================================================= */
+
+.bp-hero {
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 0 100px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(22, 78, 99, 0.16),
+      transparent 35%
+    ),
+    var(--background);
+}
+
+.bp-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(320px, 0.9fr);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.bp-hero-content {
+  max-width: 720px;
+}
+
+.bp-eyebrow {
+  margin-bottom: 18px;
+
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.bp-hero h1 {
+  margin-bottom: 25px;
+
+  color: var(--main);
+
+  font-size: clamp(3rem, 6vw, 5.2rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+}
+
+.bp-hero-intro {
+  max-width: 650px;
+
+  margin-bottom: 35px;
+
+  color: var(--muted);
+
+  font-size: 1.08rem;
+}
+
+.bp-hero-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.bp-hero-links a {
+  padding: 10px 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 50px;
+
+  background: var(--white);
+
+  color: var(--main);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.bp-hero-links a:hover {
+  border-color: var(--accent);
+
+  background: var(--accent);
+
+  color: var(--white);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BLACKPOINT LOGO
+   ========================================================= */
+
+.bp-hero-visual {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.bp-logo-card {
+  width: 100%;
+  max-width: 440px;
+
+  min-height: 300px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 30px 70px rgba(11, 31, 58, 0.12);
+
+  transform: rotate(2deg);
+
+  transition: transform var(--transition);
+}
+
+.bp-logo-card:hover {
+  transform: rotate(0deg) translateY(-5px);
+}
+
+.bp-logo-card img {
+  width: 100%;
+  max-width: 300px;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.bp-section {
+  padding: 110px 0;
+
+  background: var(--background);
+}
+
+.bp-section-alt {
+  background: var(--white);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.bp-section-heading {
+  max-width: 700px;
+
+  margin-bottom: 55px;
+}
+
+.bp-section-heading-wide {
+  max-width: 760px;
+}
+
+.bp-section-label {
+  margin-bottom: 15px;
+
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.bp-section-heading h2 {
+  margin-bottom: 20px;
+
+  color: var(--main);
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+  line-height: 1.2;
+
+  letter-spacing: -0.035em;
+}
+
+.bp-section-heading > p:last-child {
+  max-width: 680px;
+
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   PROJECT OVERVIEW
+   ========================================================= */
+
+.bp-overview {
+  background: var(--white);
+}
+
+.bp-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.bp-overview-copy {
+  max-width: 700px;
+}
+
+.bp-overview-copy p {
+  margin-bottom: 20px;
+
+  color: var(--muted);
+}
+
+.bp-overview-copy p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+   ========================================================= */
+
+.bp-project-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
+
+.bp-project-card {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.bp-project-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 45px rgba(11, 31, 58, 0.10);
+}
+
+
+/* =========================================================
+   PDF PREVIEW
+   ========================================================= */
+
+.bp-project-preview {
+  height: 360px;
+
+  overflow: hidden;
+
+  background: #e9e5de;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.bp-project-preview iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  background: var(--white);
+}
+
+
+/* =========================================================
+   PROJECT CARD CONTENT
+   ========================================================= */
+
+.bp-project-card-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px;
+}
+
+.bp-card-number {
+  margin-bottom: 14px;
+
+  color: var(--accent);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.bp-project-card h3 {
+  margin-bottom: 14px;
+
+  color: var(--main);
+
+  font-size: 1.3rem;
+
+  line-height: 1.25;
+}
+
+.bp-project-card p:not(.bp-card-number) {
+  margin-bottom: 24px;
+
+  color: var(--muted);
+
+  font-size: 0.92rem;
+}
+
+.bp-project-link {
+  margin-top: auto;
+
+  color: var(--accent);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.bp-project-link:hover {
+  color: var(--secondary);
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CONTRIBUTION / SKILLS
+   ========================================================= */
+
+.bp-contribution-section {
+  padding: 110px 0;
+
+  background: var(--secondary);
+}
+
+.bp-centered {
+  max-width: 700px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.bp-contribution-section .bp-section-label {
+  color: var(--accent);
+}
+
+.bp-contribution-section h2 {
+  color: var(--white);
+}
+
+.bp-skills-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.bp-skill-item {
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: var(--radius);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.bp-skill-item:hover {
+  background: rgba(255, 255, 255, 0.10);
+
+  transform: translateY(-4px);
+}
+
+.bp-skill-item span {
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.bp-skill-item h3 {
+  color: var(--white);
+
+  font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+.bp-footer-link {
+  padding: 35px 0;
+
+  background: var(--background);
+
+  border-top: 1px solid var(--border);
+}
+
+.bp-back-link {
+  color: var(--accent);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.bp-back-link:hover {
+  color: var(--secondary);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .bp-hero {
+    padding: 135px 0 85px;
+  }
+
+  .bp-hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .bp-hero-visual {
+    justify-content: flex-start;
+  }
+
+  .bp-logo-card {
+    max-width: 500px;
+  }
+
+  .bp-overview-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .bp-project-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .bp-project-grid .bp-project-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .bp-skills-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .bp-hero {
+    min-height: auto;
+
+    padding: 125px 0 75px;
+  }
+
+  .bp-hero-grid {
+    gap: 40px;
+  }
+
+  .bp-hero h1 {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .bp-hero-intro {
+    font-size: 1rem;
+  }
+
+  .bp-hero-links {
+    gap: 8px;
+  }
+
+  .bp-hero-links a {
+    padding: 9px 13px;
+
+    font-size: 0.8rem;
+  }
+
+  .bp-logo-card {
+    min-height: 240px;
+
+    padding: 35px;
+
+    transform: none;
+  }
+
+  .bp-section {
+    padding: 75px 0;
+  }
+
+  .bp-section-heading {
+    margin-bottom: 40px;
+  }
+
+  .bp-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bp-project-grid .bp-project-card:last-child {
+    grid-column: auto;
+  }
+
+  .bp-project-preview {
+    height: 420px;
+  }
+
+  .bp-project-card-content {
+    padding: 24px;
+  }
+
+  .bp-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bp-skill-item {
+    min-height: 130px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .bp-project-preview {
+    height: 350px;
+  }
+
+  .bp-logo-card {
+    min-height: 210px;
+  }
+
+}
