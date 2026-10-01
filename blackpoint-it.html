@@ -10,110 +10,72 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Resume | Eduardo Ignacio | Digital Marketing Specialist
-  </title>
-
   <meta
     name="description"
-    content="Resume of Eduardo Ignacio, Digital Marketing Specialist with experience in digital marketing, social media, content marketing, email marketing, SEO, LinkedIn Ads, lead generation, and marketing analytics."
+    content="Marketing projects created and supported for BlackPoint IT, including landing pages, brochures, infographics, and email marketing."
+  >
+
+  <title>BlackPoint IT | Marketing Projects | Kevin Arevalo</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon-o.png">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
   >
 
   <link rel="icon" type="image/png" href="assets/favicon-b-o.png">
 
-  <!-- Google Font -->
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+  <!-- Main Portfolio Styles -->
+  <link rel="stylesheet" href="styles.css">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-
-  <!-- Main Website CSS -->
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  >
-
-  <!-- Resume Page CSS -->
-  <link
-    rel="stylesheet"
-    href="resume.css"
-  >
+  <!-- BlackPoint IT Page Styles -->
+  <link rel="stylesheet" href="blackpoint-it.css">
 
 </head>
 
 
-<body class="resume-page">
+<body>
+
+ <!-- =========================
+     HEADER
+========================== -->
+
+<header class="site-header">
+
+  <nav class="nav container" aria-label="Primary navigation">
+
+    <a class="brand" href="index.html" aria-label="Eduardo Ignacio">
+
+      <img src="assets/favicon-b-o.png" alt="Eduardo Ignacio">
+
+    </a>
+
+    <a href="index.html" class="logo">
+      Eduardo<span>Ignacio</span>
+    </a>
 
 
-  <!-- =====================================================
-       HEADER / NAVIGATION
-       ===================================================== -->
 
-  <header class="site-header">
-
-    <nav
-      class="nav container"
-      aria-label="Primary navigation"
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
     >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <div class="brand-group">
+    <div class="nav-links" id="nav-links">
 
-        <a
-          class="brand"
-          href="index.html"
-          aria-label="Eduardo Ignacio"
-        >
-          <img
-            src="assets/favicon-b-o.png"
-            alt="Eduardo Ignacio"
-          >
-        </a>
-
-        <a
-          href="index.html"
-          class="logo"
-        >
-          Eduardo<span>Ignacio</span>
-        </a>
-
-      </div>
-
-
-      <button
-        class="menu-toggle"
-        id="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="nav-links"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-
-      <div
-        class="nav-links"
-        id="nav-links"
-      >
-
-        <a href="index.html#home">
-          Home
-        </a>
-
+      <a href="index.html">Home</a>
         <a href="index.html#services">
           Services
         </a>
@@ -121,155 +83,89 @@
         <a href="index.html#about">
           About
         </a>
+      <a href="resume.html">Resume</a>
+<div class="nav-dropdown">
+  <a href="#projects" class="nav-dropdown-toggle">
+    Projects
+    <span class="dropdown-arrow">▾</span>
+  </a>
 
-        <a
-          href="resume.html"
-          aria-current="page"
-        >
-          Resume
-        </a>
-
-        <!-- Projects Dropdown -->
-
-        <div class="nav-dropdown">
-
-          <a
-            href="index.html#projects"
-            class="nav-dropdown-toggle"
-            aria-haspopup="true"
-          >
-            Projects
-            <span class="dropdown-arrow">▾</span>
-          </a>
-
-
-          <div class="dropdown-menu">
-
-            <a href="blackpoint-it.html">
-              BlackPoint
-            </a>
+  <div class="dropdown-menu">
+    <a href="blackpoint-it.html">BlackPoint</a>
     <a href="https://projectdesign25.my.canva.site/creative-graphics-design" target="_blank" class="text-link">Graphics Design</a>
 
-
-          </div>
-
-        </div>
+  </div>
+</div>
 
 
 
+      <a href="mailto:eaignacio03@gmail.com?subject=I%20would%20like%20to%20know%20more%20about%20your%20services&body=Hi%20Eduardo%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Can%20you%20please%20get%20back%20to%20me,%20and%20let%27s%20talk%20about%20it.%0A%0AThank%20you%21" target="_blank" rel="noopener noreferrer" class="nav-cta" >Let's Talk</a>
 
+      <div class="socials" aria-label="Social links">
         <a
-          href="mailto:eaignacio03@gmail.com?subject=I%20would%20like%20to%20know%20more%20about%20your%20services&body=Hi%20Eduardo%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Can%20you%20please%20get%20back%20to%20me%2C%20and%20let%27s%20talk%20about%20it.%0A%0AThank%20you%21"
-          class="nav-cta"
+          href="https://www.linkedin.com/in/eduardo-iii-ignacio-841a6138a/"
           target="_blank"
           rel="noopener noreferrer"
-          data-cta="Let's Talk"
+          aria-label="LinkedIn"
         >
-          Let's Talk
+          <img src="assets/LinkedIn_Icon.svg" alt="">
         </a>
-
-
-        <div
-          class="socials"
-          aria-label="Social links"
-        >
-
-          <a
-            href="https://www.linkedin.com/in/eduardo-iii-ignacio-841a6138a/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-
-            <img
-              src="assets/LinkedIn_Icon.svg"
-              alt=""
-            >
-
-          </a>
-
-        </div>
-
       </div>
 
-    </nav>
+    </div>
 
-  </header>
+  </nav>
 
+</header>
 
-
-  <!-- =========================================================
-       RESUME HERO
-       ========================================================= -->
 
   <main>
 
+    <!-- =====================================================
+         PROJECT HERO
+    ====================================================== -->
+
     <section
-      class="resume-hero"
+      class="bp-hero"
       id="home"
     >
 
       <div class="container">
 
-        <div class="resume-hero-grid">
+        <div class="bp-hero-grid">
 
+          <div class="bp-hero-content">
 
-          <div class="resume-hero-content">
-
-            <p class="resume-label">
-              Professional Resume
+            <p class="bp-eyebrow">
+              MARKETING PROJECT
             </p>
-
 
             <h1>
-              Eduardo Ignacio
+              BlackPoint IT
             </h1>
 
-
-            <p class="resume-title">
-              Digital Marketing Specialist
+            <p class="bp-hero-intro">
+              Marketing materials and digital content created and
+              supported during my time as a Marketing Assistant
+              with BlackPoint IT.
             </p>
 
+            <div class="bp-hero-links">
 
-            <p class="resume-hero-text">
-              Digital Marketing Specialist with experience in social
-              media, SEO, analytics, graphic design, marketing
-              initiatives, lead generation, content creation, email
-              marketing, administrative support, and customer
-              engagement.
-            </p>
-
-
-            <div class="resume-contact">
-
-              <a href="tel:+639612389925">
-                (+63) 961 238 9925
+              <a href="#landing-pages">
+                Landing Pages
               </a>
 
-              <a href="mailto:eaignacio03@gmail.com">
-                eaignacio03@gmail.com
+              <a href="#brochures">
+                Brochures
               </a>
 
-            </div>
-
-
-            <div class="resume-hero-actions">
-
-              <a
-                href="#experience"
-                class="btn resume-primary-btn"
-              >
-                View Experience
+              <a href="#infographics">
+                Infographics
               </a>
 
-              <a
-                href="mailto:eaignacio03@gmail.com?subject=I%20would%20like%20to%20know%20more%20about%20your%20services&body=Hi%20Eduardo%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Can%20you%20please%20get%20back%20to%20me%2C%20and%20let%27s%20talk%20about%20it.%0A%0AThank%20you%21"
-                class="btn resume-secondary-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-cta="Contact Eduardo"
-              >
-                Contact Me
+              <a href="#casestudies">
+                Case Studies
               </a>
 
             </div>
@@ -277,33 +173,14 @@
           </div>
 
 
-          <div class="resume-hero-card">
+          <div class="bp-hero-visual">
 
-            <div class="resume-hero-card-inner">
+            <div class="bp-logo-card">
 
-              <span class="resume-card-label">
-                DIGITAL MARKETING
-              </span>
-
-              <strong>
-                Strategy
-              </strong>
-
-              <strong>
-                Content
-              </strong>
-
-              <strong>
-                Campaigns
-              </strong>
-
-              <strong>
-                Analytics
-              </strong>
-
-              <strong>
-                Lead Generation
-              </strong>
+              <img
+                src="assets/blackpoint-it/bp-logo-black.svg"
+                alt="BlackPoint IT"
+              >
 
             </div>
 
@@ -316,45 +193,49 @@
     </section>
 
 
+    <!-- =====================================================
+         PROJECT OVERVIEW
+    ====================================================== -->
 
-    <!-- =========================================================
-         PROFESSIONAL SUMMARY
-         ========================================================= -->
-
-    <section class="resume-section">
+    <section class="bp-section bp-overview">
 
       <div class="container">
 
-        <div class="resume-section-heading">
+        <div class="bp-overview-grid">
 
-          <p class="section-label">
-            Profile
-          </p>
+          <div class="bp-section-heading">
 
-          <h2>
-            Professional Summary
-          </h2>
+            <p class="bp-section-label">
+              PROJECT OVERVIEW
+            </p>
 
-        </div>
+            <h2>
+              Supporting BlackPoint IT's Marketing Activities
+            </h2>
 
+          </div>
 
-        <div class="resume-summary">
+          <div class="bp-overview-copy">
 
-          <p>
-            Results driven digital marketer with experience in social
-            media, SEO, analytics, graphic design, marketing initiatives,
-            lead generation, content creation, email marketing,
-            administrative support, and customer engagement.
-          </p>
+            <p>
+              During my time as a Marketing Assistant with
+              BlackPoint IT, I supported a range of marketing
+              activities and digital content projects.
+            </p>
 
+            <p>
+              My work included creating and supporting landing
+              pages, brochures, infographics, and email marketing
+              materials used to communicate products, services,
+              campaigns, and other marketing initiatives.
+            </p>
 
-          <p>
-            Strong background in the IT sector, with hands-on experience
-            using Adobe Creative Suite and CRM platforms, particularly
-            HubSpot. Skilled at creating engaging content and digital
-            campaigns that support business growth and customer
-            relationships.
-          </p>
+            <p>
+              This page presents selected examples of the work
+              I contributed to during that time.
+            </p>
+
+          </div>
 
         </div>
 
@@ -363,411 +244,259 @@
     </section>
 
 
-
-    <!-- =========================================================
-         CORE SKILLS
-         ========================================================= -->
-
-    <section class="resume-section resume-section-light">
-
-      <div class="container">
-
-        <div class="resume-section-heading">
-
-          <p class="section-label">
-            Expertise
-          </p>
-
-          <h2>
-            Core Skills
-          </h2>
-
-        </div>
-
-
-        <div class="skills-list">
-
-          <span>Digital Marketing</span>
-
-          <span>Content Marketing</span>
-
-          <span>Social Media Marketing</span>
-
-          <span>Email Marketing</span>
-
-          <span>SEO / On-Page SEO</span>
-
-          <span>LinkedIn Ads / PPC</span>
-
-          <span>Lead Generation</span>
-
-          <span>Lead Management</span>
-
-          <span>Marketing Analytics &amp; Reporting</span>
-
-          <span>WordPress</span>
-
-          <span>Landing Pages</span>
-
-          <span>Copywriting</span>
-
-          <span>Marketing Campaigns</span>
-
-          <span>Audience Targeting</span>
-
-          <span>Graphic Design</span>
-
-          <span>B2B Marketing</span>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         PROFESSIONAL EXPERIENCE
-         ========================================================= -->
+    <!-- =====================================================
+         LANDING PAGES
+    ====================================================== -->
 
     <section
-      class="resume-section"
-      id="experience"
+      class="bp-section bp-portfolio-section"
+      id="landing-pages"
     >
 
       <div class="container">
 
-        <div class="resume-section-heading">
+        <div class="bp-section-heading bp-section-heading-wide">
 
-          <p class="section-label">
-            Experience
+          <p class="bp-section-label">
+            01 — LANDING PAGES
           </p>
 
           <h2>
-            Professional Experience
-          </h2>
-
-        </div>
-
-
-        <div class="experience-list">
-
-
-          <!-- COMPASSMSP -->
-
-          <article class="experience-item">
-
-            <div class="experience-header">
-
-              <div>
-
-                <h3>
-                  Digital Marketing Specialist
-                </h3>
-
-                <p class="company-name">
-                  CompassMSP (Formerly BlackPoint IT)
-                </p>
-
-              </div>
-
-
-              <span class="experience-date">
-                January 2022 – April 2025
-              </span>
-
-            </div>
-
-
-            <div class="experience-tools">
-
-              <strong>
-                Tools:
-              </strong>
-
-              HubSpot, LinkedIn Campaign Manager, Monday.com,
-              WordPress, HTML, CSS, Figma, Unbounce, Canva,
-              Adobe Photoshop, Adobe Illustrator, Sales Navigator,
-              ZoomInfo, Hunter.io, Apollo.io, Instantly, NetSuite,
-              Jasper AI, Grammarly, Claude, SEMRush, CapCut,
-              Google Workspace
-
-            </div>
-
-
-            <ul>
-
-              <li>
-                Created social media posts, marketing content,
-                email marketing graphics, content creation, and
-                other digital marketing assets.
-              </li>
-
-              <li>
-                Managed LinkedIn Ads campaigns, including campaign
-                setup, audience targeting, ad creation, budget
-                management, performance monitoring, and reporting.
-              </li>
-
-              <li>
-                Prepared marketing analysis reports and supported
-                lead management and lead nurturing activities.
-              </li>
-
-              <li>
-                Managed WordPress website content and performed
-                on-page SEO to improve website pages.
-              </li>
-
-              <li>
-                Used HTML and CSS to make website content and
-                design updates and created landing pages with
-                Figma and Unbounce.
-              </li>
-
-              <li>
-                Supported lead generation and prospecting using
-                sales intelligence and outreach platforms.
-              </li>
-
-              <li>
-                Used AI-assisted writing tools to improve content
-                quality and streamline content production.
-              </li>
-
-            </ul>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         TECHNICAL SKILLS
-         ========================================================= -->
-
-    <section class="resume-section resume-section-light">
-
-      <div class="container">
-
-        <div class="resume-section-heading">
-
-          <p class="section-label">
-            Tools &amp; Platforms
-          </p>
-
-          <h2>
-            Technical Skills
-          </h2>
-
-        </div>
-
-
-        <div class="technical-skills">
-
-
-          <article class="technical-skill">
-
-            <h3>
-              Marketing &amp; Advertising
-            </h3>
-
-            <p>
-              HubSpot, LinkedIn Campaign Manager, LinkedIn Ads,
-              PPC, email marketing, SEO, lead generation,
-              lead management
-            </p>
-
-          </article>
-
-
-          <article class="technical-skill">
-
-            <h3>
-              Web &amp; Landing Pages
-            </h3>
-
-            <p>
-              WordPress, HTML, CSS, Figma, Unbounce
-            </p>
-
-          </article>
-
-
-          <article class="technical-skill">
-
-            <h3>
-              Design &amp; Content
-            </h3>
-
-            <p>
-              Canva, Adobe Photoshop, Adobe Illustrator,
-              Jasper AI, Claude, CapCut, SEMRush
-            </p>
-
-          </article>
-
-
-          <article class="technical-skill">
-
-            <h3>
-              Sales &amp; Prospecting
-            </h3>
-
-            <p>
-              LinkedIn Sales Navigator, ZoomInfo, Hunter.io,
-              Apollo.io, Instantly, NetSuite
-            </p>
-
-          </article>
-
-
-          <article class="technical-skill">
-
-            <h3>
-              Operations
-            </h3>
-
-            <p>
-              Zendesk, Root Cause Analysis (RCA), Standard
-              Operating Procedures, Reporting, Calibration
-            </p>
-
-          </article>
-
-
-          <article class="technical-skill">
-
-            <h3>
-              Project Management
-            </h3>
-
-            <p>
-              Monday.com, Google Workspace, Google Sheets,
-              Excel, Notion, Gmail, Outlook
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         EDUCATION
-         ========================================================= -->
-
-
-<section class="resume-section">
-
-  <div class="container">
-
-    <div class="resume-section-heading">
-
-      <p class="section-label">
-        Education
-      </p>
-
-      <h2>
-        Education
-      </h2>
-
-    </div>
-
-
-    <article class="education-card">
-
-      <div class="education-main">
-
-        <div class="education-logo">
-
-          <img
-            src="assets/pup-logo.png"
-            alt="Polytechnic University of the Philippines logo"
-          >
-
-        </div>
-
-
-        <div class="education-content">
-
-          <h3>
-            Bachelor of Science in Hospitality Management
-          </h3>
-
-          <p class="education-school">
-            Polytechnic University of the Philippines
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="education-details">
-
-        <span>
-          SY: 2022–2026
-        </span>
-
-        <strong>
-          Magna Cum Laude
-        </strong>
-
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-
-
-    <!-- =========================================================
-         RESUME CTA
-         ========================================================= -->
-
-    <section class="resume-cta">
-
-      <div class="container">
-
-        <div class="resume-cta-content">
-
-          <p class="section-label">
-            Let's Work Together
-          </p>
-
-          <h2>
-            Interested in working with Eduardo?
+            Landing Page Design &amp; Marketing
           </h2>
 
           <p>
-            Feel free to get in touch to discuss a marketing project,
-            campaign, or professional opportunity.
+            Landing pages created to support BlackPoint IT's
+            marketing campaigns, promotions, and lead-generation
+            activities.
           </p>
 
+        </div>
 
-          <a
-            href="mailto:eaignacio03@gmail.com?subject=I%20would%20like%20to%20know%20more%20about%20your%20services&body=Hi%20Eduardo%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Can%20you%20please%20get%20back%20to%20me%2C%20and%20let%27s%20talk%20about%20it.%0A%0AThank%20you%21"
-            class="btn resume-cta-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cta="Let's Talk"
-          >
-            Let's Talk
-          </a>
+
+        <div class="bp-project-grid">
+
+          <!-- LANDING PAGE 01 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-lp-barracuda.pdf"
+                title="Barracuda Landing Page PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                01
+              </p>
+
+              <h3>
+                Barracuda Landing Page
+              </h3>
+
+              <p>
+                Landing page created for a
+                <strong><u>Barracuda marketing campaign</u></strong>,
+                designed to present key information and encourage
+                visitors to take action.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-lp-barracuda.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Landing Page →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- LANDING PAGE 02 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-lp-contact-center.pdf"
+                title="Contact Center Landing Page PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                02
+              </p>
+
+              <h3>
+                Contact Center Landing Page
+              </h3>
+
+              <p>
+                Landing page created to support a
+                <strong><u>Contact Center Marketing Campaign</u></strong>,
+                highlighting key solutions and guiding visitors
+                toward taking the next step.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-lp-contact-center.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Landing Page →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- LANDING PAGE 03 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-lp-health-care.pdf"
+                title="Healthcare Landing Page PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                03
+              </p>
+
+              <h3>
+                Healthcare Landing Page
+              </h3>
+
+              <p>
+                A
+                <strong><u>healthcare-focused campaign landing page</u></strong>
+                designed to communicate relevant solutions,
+                highlight key benefits, and connect visitors
+                with the information they need.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-lp-health-care.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Landing Page →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- LANDING PAGE 04 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-lp-location-seattle.pdf"
+                title="Seattle Location Landing Page PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                04
+              </p>
+
+              <h3>
+                Seattle Location Landing Page
+              </h3>
+
+              <p>
+                A dedicated
+                <strong><u>Seattle landing page campaign</u></strong>
+                combining clear messaging and visual content
+                to create a focused experience for the local
+                audience.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-lp-location-seattle.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Landing Page →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- LANDING PAGE 05 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-lp-location-voip.pdf"
+                title="VoIP Location Landing Page PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                05
+              </p>
+
+              <h3>
+                VoIP Location Landing Page
+              </h3>
+
+              <p>
+                A targeted
+                <strong><u>VoIP landing page campaign</u></strong>
+                presenting business communication solutions
+                and helping visitors explore the right options
+                for their organization.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-lp-location-voip.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Landing Page →
+              </a>
+
+            </div>
+
+          </article>
 
         </div>
 
@@ -776,28 +505,669 @@
     </section>
 
 
+    <!-- =====================================================
+         BROCHURES
+    ====================================================== -->
 
-    <!-- =========================================================
-         PERSONAL BRAND INTRO
-         ========================================================= -->
-
-    <section class="resume-signature">
+    <section
+      class="bp-section bp-section-alt"
+      id="brochures"
+    >
 
       <div class="container">
 
-        <h2>
-          Eduardo Ignacio
-        </h2>
+        <div class="bp-section-heading bp-section-heading-wide">
 
-        <p class="resume-signature-title">
-          Digital Marketing Specialist
-        </p>
+          <p class="bp-section-label">
+            02 — BROCHURES
+          </p>
 
-        <p>
-          Digital Marketing • Content Marketing • Social Media •
-          Email Marketing • SEO • LinkedIn Ads • Lead Generation •
-          Marketing Analytics • Graphic Design
-        </p>
+          <h2>
+            Brochures &amp; Marketing Materials
+          </h2>
+
+          <p>
+            Marketing materials designed to communicate
+            information in a clear and professional format.
+          </p>
+
+        </div>
+
+
+        <div class="bp-project-grid">
+
+
+          <!-- BROCHURE 01 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-br-interface-v1.pdf"
+                title="Interface Event v1 Brochure PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                01
+              </p>
+
+              <h3>
+                Interface Event v1
+              </h3>
+
+              <p>
+                A promotional event
+                <strong><u>brochure version 1</u></strong>
+                created to showcase Interface's event details
+                and offerings through engaging visuals, organized
+                content, and clear messaging.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-br-interface-v1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check the Brochure →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- BROCHURE 02 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-br-interface-v2.pdf"
+                title="Interface Event v2 Brochure PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                02
+              </p>
+
+              <h3>
+                Interface Event v2
+              </h3>
+
+              <p>
+                A promotional event
+                <strong><u>brochure version 2</u></strong>
+                created to showcase Interface's event details
+                and offerings through engaging visuals, organized
+                content, and clear messaging.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-br-interface-v2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check the Brochure →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFOGRAPHICS
+    ====================================================== -->
+
+    <section
+      class="bp-section"
+      id="infographics"
+    >
+
+      <div class="container">
+
+        <div class="bp-section-heading bp-section-heading-wide">
+
+          <p class="bp-section-label">
+            03 — INFOGRAPHICS
+          </p>
+
+          <h2>
+            Infographics &amp; Visual Content
+          </h2>
+
+          <p>
+            Visual content created to make marketing information
+            easier to understand and communicate.
+          </p>
+
+        </div>
+
+
+        <div class="bp-project-grid">
+
+
+          <!-- INFOGRAPHIC 01 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-Infog-10-most-annoying-it-issues.pdf"
+                title="Most Annoying IT Related Issues Infographic PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                01
+              </p>
+
+              <h3>
+                Most Annoying IT Related Issues
+              </h3>
+
+              <p>
+                A promotional event Infographic designed to
+                highlight the 10 most annoying IT-related issues
+                faced by businesses, using engaging visuals and
+                clear messaging to present common challenges and
+                relevant solutions.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-Infog-10-most-annoying-it-issues.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View the Material →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- INFOGRAPHIC 02 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-Infog-cloud-computing.pdf"
+                title="Cloud Computing Infographic PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                02
+              </p>
+
+              <h3>
+                Most Annoying IT Related Issues
+              </h3>
+
+              <p>
+                An infographic created to highlight the benefits
+                and challenges of cloud computing for SMBs, using
+                clear messaging and engaging visuals to explain
+                how cloud technology can support businesses.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-Infog-10-most-annoying-it-issues.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View the Material →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CASE STUDIES
+    ====================================================== -->
+
+    <section
+      class="bp-section bp-section-alt"
+      id="casestudies"
+    >
+
+      <div class="container">
+
+        <div class="bp-section-heading bp-section-heading-wide">
+
+          <p class="bp-section-label">
+            03 — CASE STUDIES
+          </p>
+
+          <h2>
+            Case Studies
+          </h2>
+
+          <p>
+            Selected marketing case studies showcasing campaign
+            strategies, creative solutions, and measurable
+            business outcomes.
+          </p>
+
+        </div>
+
+
+        <div class="bp-project-grid">
+
+
+          <!-- CASE STUDY 01 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-cs-mcclone.pdf"
+                title="McClone Case Study PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                01
+              </p>
+
+              <h3>
+                McClone Case Study
+              </h3>
+
+              <p>
+                A marketing case study created to highlight
+                McClone’s approach, key challenges, and results
+                through a clear and visually engaging format. The
+                case study organizes important information,
+                insights, and outcomes into an easy-to-follow
+                presentation designed to communicate the value of
+                the solution and its impact.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-cs-mcclone.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the Case Study →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CASE STUDY 02 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-cs-kline-galland.pdf"
+                title="Kline Galland Case Study PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                02
+              </p>
+
+              <h3>
+                Kline Galland Case Study
+              </h3>
+
+              <p>
+                An infographic created to highlight the benefits
+                and challenges of cloud computing for SMBs, using
+                clear messaging and engaging visuals to explain
+                how cloud technology can support businesses.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-cs-kline-galland.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the Case Study →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CASE STUDY 03 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-cs-helly-hansen.pdf"
+                title="Helly Hansen Case Study PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                03
+              </p>
+
+              <h3>
+                Helly Hansen Case Study
+              </h3>
+
+              <p>
+                A visually engaging case study developed to
+                present Helly Hansen’s marketing story, highlighting
+                the project objectives, strategic approach, and key
+                results. The content was structured to make complex
+                information easy to understand while showcasing the
+                solution, its benefits, and the overall impact of
+                the project.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-cs-helly-hansen.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the Case Study →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CASE STUDY 04 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-cs-hartung-glass.pdf"
+                title="Hartung Glass Case Study PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                04
+              </p>
+
+              <h3>
+                Hartung Glass Case Study
+              </h3>
+
+              <p>
+                A marketing case study developed to showcase
+                Hartung Glass’s project objectives, solution, and
+                results in a clear and engaging format. The content
+                brings together key information, insights, and
+                outcomes to tell the story of the project while
+                demonstrating the value and impact of the work.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-cs-hartung-glass.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the Case Study →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CASE STUDY 05 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-cs-bader-martin-v1.pdf"
+                title="Bader Martin v1 Case Study PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                05
+              </p>
+
+              <h3>
+                Bader Martin Case Study V1
+              </h3>
+
+              <p>
+                A professionally designed case study created to
+                present Bader Martin’s project story, key objectives,
+                and overall results. The content combines clear
+                messaging and structured visuals to highlight the
+                solution, important insights, and value delivered
+                through the project.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-cs-bader-martin-v1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the Case Study →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CASE STUDY 06 -->
+
+          <article class="bp-project-card">
+
+            <div class="bp-project-preview">
+
+              <iframe
+                src="assets/blackpoint-it/bp-cs-bader-martin-v2.pdf"
+                title="Bader Martin v2 Case Study PDF"
+              ></iframe>
+
+            </div>
+
+            <div class="bp-project-card-content">
+
+              <p class="bp-card-number">
+                06
+              </p>
+
+              <h3>
+                Bader Martin Case Study V2
+              </h3>
+
+              <p>
+                A refined version of the Bader Martin case study
+                designed to present the project’s key messaging,
+                insights, and outcomes in a clear and engaging
+                format. The updated layout organizes the
+                information into an easy-to-follow story while
+                highlighting the solution and its overall impact.
+              </p>
+
+              <a
+                class="bp-project-link"
+                href="assets/blackpoint-it/bp-cs-bader-martin-v2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the Case Study →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SKILLS / CONTRIBUTION
+    ====================================================== -->
+
+    <section class="bp-contribution-section">
+
+      <div class="container">
+
+        <div class="bp-section-heading bp-centered">
+
+          <p class="bp-section-label">
+            MY CONTRIBUTION
+          </p>
+
+          <h2>
+            Skills Used
+          </h2>
+
+        </div>
+
+
+        <div class="bp-skills-grid">
+
+          <div class="bp-skill-item">
+            <span>01</span>
+            <h3>Landing Page Design</h3>
+          </div>
+
+          <div class="bp-skill-item">
+            <span>02</span>
+            <h3>Graphic Design</h3>
+          </div>
+
+          <div class="bp-skill-item">
+            <span>03</span>
+            <h3>Content Marketing</h3>
+          </div>
+
+          <div class="bp-skill-item">
+            <span>04</span>
+            <h3>Email Marketing</h3>
+          </div>
+
+          <div class="bp-skill-item">
+            <span>05</span>
+            <h3>Lead Generation</h3>
+          </div>
+
+          <div class="bp-skill-item">
+            <span>06</span>
+            <h3>Marketing Support</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact-section" id="contact">
+
+      <div class="container contact-container">
+
+        <div>
+
+          <p class="eyebrow">
+            LET'S CONNECT
+          </p>
+
+          <h2>
+            Have a marketing project in mind?
+          </h2>
+
+          <p>
+            Whether you need help with content, campaigns, lead
+            generation, or digital marketing execution, I'd be happy
+            to connect.
+          </p>
+
+        </div>
+
+
+        <a
+          href="mailto:eaignacio03@gmail.com?subject=I%20would%20like%20to%20know%20more%20about%20your%20services&body=Hi%20Eduardo%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Can%20you%20please%20get%20back%20to%20me,%20and%20let%27s%20talk%20about%20it.%0A%0AThank%20you%21" target="_blank" rel="noopener noreferrer"
+          class="btn btn-light"
+        >
+          Get In Touch
+        </a>
 
       </div>
 
@@ -806,25 +1176,35 @@
   </main>
 
 
-
-  <!-- =========================================================
+  <!-- =========================
        FOOTER
-       ========================================================= -->
+  ========================== -->
 
-  <footer class="footer">
+  <footer class="site-footer">
 
-    <div class="container">
+    <div class="container footer-container">
 
-      © 2026 Eduardo Ignacio. All rights reserved.
+      <p>
+        © <span id="current-year"></span> Eduardo Ignacio.
+        All rights reserved.
+      </p>
+
+      <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="mailto:eaignacio03@gmail.com?subject=I%20would%20like%20to%20know%20more%20about%20your%20services&body=Hi%20Eduardo%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Can%20you%20please%20get%20back%20to%20me,%20and%20let%27s%20talk%20about%20it.%0A%0AThank%20you%21" target="_blank" rel="noopener noreferrer">Contact</a>
+
+      </div>
 
     </div>
 
   </footer>
 
 
-
+  <!-- JavaScript -->
   <script src="script.js"></script>
 
 </body>
-
 </html>
