@@ -1,0 +1,1012 @@
+/* =========================================================
+   EDUARDO IGNACIO
+   RESUME PAGE
+========================================================= */
+
+:root {
+  --resume-main: #0b1f3a;
+  --resume-secondary: #164e63;
+  --resume-accent: #c65d21;
+  --resume-background: #f5efe6;
+  --resume-text: #263238;
+  --resume-white: #ffffff;
+  --resume-muted: #68747b;
+  --resume-border: rgba(11, 31, 58, 0.12);
+  --resume-radius: 14px;
+  --resume-shadow: 0 16px 40px rgba(11, 31, 58, 0.08);
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.resume-page {
+  background: var(--resume-background);
+  color: var(--resume-text);
+}
+
+.resume-page *,
+.resume-page *::before,
+.resume-page *::after {
+  box-sizing: border-box;
+}
+
+.resume-page a {
+  color: inherit;
+}
+
+.resume-page .container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.resume-page .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: rgba(245, 239, 230, 0.94);
+  border-bottom: 1px solid var(--resume-border);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.resume-page .nav {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.resume-page .brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.resume-page .brand {
+  display: flex;
+  align-items: center;
+}
+
+.resume-page .brand img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.resume-page .logo {
+  color: var(--resume-main);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.resume-page .logo span {
+  color: var(--resume-accent);
+}
+
+.resume-page .nav-links {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.resume-page .nav-links > a,
+.resume-page .nav-dropdown-toggle {
+  color: var(--resume-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.resume-page .nav-links > a:hover,
+.resume-page .nav-dropdown-toggle:hover {
+  color: var(--resume-accent);
+}
+
+
+/* =========================================================
+   PROJECT DROPDOWN
+========================================================= */
+
+.resume-page .nav-dropdown {
+  position: relative;
+}
+
+.resume-page .nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.resume-page .dropdown-arrow {
+  font-size: 0.72rem;
+  transition: transform 0.25s ease;
+}
+
+.resume-page .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+
+  width: 190px;
+  padding: 8px;
+
+  background: var(--resume-white);
+  border: 1px solid var(--resume-border);
+  border-radius: 12px;
+
+  box-shadow: var(--resume-shadow);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(-50%) translateY(6px);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+
+  z-index: 1001;
+}
+
+.resume-page .dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.resume-page .nav-dropdown:hover .dropdown-menu,
+.resume-page .nav-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.resume-page .nav-dropdown:hover .dropdown-arrow,
+.resume-page .nav-dropdown:focus-within .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.resume-page .dropdown-menu a {
+  display: block;
+
+  padding: 11px 14px;
+
+  color: var(--resume-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  border-radius: 8px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.resume-page .dropdown-menu a:hover,
+.resume-page .dropdown-menu a:focus {
+  background: var(--resume-background);
+  color: var(--resume-accent);
+}
+
+
+/* =========================================================
+   NAV CTA
+========================================================= */
+
+.resume-page .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 17px;
+
+  color: var(--resume-white) !important;
+  background: var(--resume-accent);
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.resume-page .nav-cta:hover {
+  background: #a94f1d;
+  color: var(--resume-white) !important;
+  transform: translateY(-1px);
+}
+
+.resume-page .socials {
+  display: flex;
+  align-items: center;
+}
+
+.resume-page .socials img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   RESUME HERO
+========================================================= */
+
+.resume-page .resume-hero {
+  padding: 170px 0 100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--resume-main) 0%,
+      var(--resume-secondary) 100%
+    );
+
+  color: var(--resume-white);
+}
+
+.resume-page .resume-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.resume-page .resume-label {
+  margin: 0 0 16px;
+
+  color: #e6a77e;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.resume-page .resume-hero h1 {
+  margin: 0;
+
+  color: var(--resume-white);
+
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.resume-page .resume-title {
+  margin: 22px 0 0;
+
+  color: #f1d4c2;
+
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.resume-page .resume-hero-text {
+  max-width: 680px;
+  margin: 22px 0 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.resume-page .resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+
+  margin-top: 28px;
+}
+
+.resume-page .resume-contact a {
+  color: var(--resume-white);
+
+  font-size: 0.92rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.resume-page .resume-contact a:hover {
+  color: #f1b28b;
+}
+
+.resume-page .resume-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.resume-page .resume-primary-btn,
+.resume-page .resume-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.resume-page .resume-primary-btn {
+  color: var(--resume-white);
+  background: var(--resume-accent);
+}
+
+.resume-page .resume-primary-btn:hover {
+  background: #a94f1d;
+  transform: translateY(-2px);
+}
+
+.resume-page .resume-secondary-btn {
+  color: var(--resume-white);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.resume-page .resume-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO SKILL CARD
+========================================================= */
+
+.resume-page .resume-hero-card {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-page .resume-hero-card-inner {
+  width: min(100%, 380px);
+
+  padding: 42px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: blur(8px);
+}
+
+.resume-page .resume-card-label {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: #e6a77e;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.resume-page .resume-hero-card-inner strong {
+  display: block;
+
+  padding: 18px 0;
+
+  color: var(--resume-white);
+
+  font-size: 1.25rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.resume-page .resume-hero-card-inner strong:last-child {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.resume-page .resume-section {
+  padding: 105px 0;
+  background: var(--resume-background);
+}
+
+.resume-page .resume-section-light {
+  background: var(--resume-white);
+}
+
+.resume-page .resume-section-heading {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.resume-page .section-label {
+  margin: 0 0 12px;
+
+  color: var(--resume-accent);
+
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.resume-page .resume-section-heading h2 {
+  margin: 0;
+
+  color: var(--resume-main);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.resume-page .resume-summary {
+  max-width: 900px;
+}
+
+.resume-page .resume-summary p {
+  margin: 0;
+
+  color: var(--resume-muted);
+
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.resume-page .resume-summary p + p {
+  margin-top: 22px;
+}
+
+
+/* =========================================================
+   CORE SKILLS
+========================================================= */
+
+.resume-page .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.resume-page .skills-list span {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 42px;
+  padding: 9px 16px;
+
+  color: var(--resume-main);
+  background: var(--resume-background);
+
+  border: 1px solid var(--resume-border);
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.resume-page .experience-list {
+  display: grid;
+  gap: 28px;
+}
+
+.resume-page .experience-item {
+  padding: 36px;
+
+  background: var(--resume-white);
+
+  border: 1px solid var(--resume-border);
+  border-radius: var(--resume-radius);
+
+  box-shadow: var(--resume-shadow);
+}
+
+.resume-page .experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.resume-page .experience-header h3 {
+  margin: 0;
+
+  color: var(--resume-main);
+
+  font-size: 1.45rem;
+}
+
+.resume-page .company-name {
+  margin: 7px 0 0;
+
+  color: var(--resume-accent);
+
+  font-weight: 700;
+}
+
+.resume-page .experience-date {
+  flex-shrink: 0;
+
+  color: var(--resume-muted);
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  text-align: right;
+}
+
+.resume-page .experience-tools {
+  margin-top: 26px;
+  padding: 18px 20px;
+
+  color: var(--resume-muted);
+  background: var(--resume-background);
+
+  border-radius: 10px;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.resume-page .experience-tools strong {
+  color: var(--resume-main);
+}
+
+.resume-page .experience-item ul {
+  margin: 26px 0 0;
+  padding-left: 20px;
+}
+
+.resume-page .experience-item li {
+  margin-bottom: 13px;
+
+  color: var(--resume-muted);
+
+  line-height: 1.75;
+}
+
+.resume-page .experience-item li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TECHNICAL SKILLS
+========================================================= */
+
+.resume-page .technical-skills {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.resume-page .technical-skill {
+  padding: 28px;
+
+  background: var(--resume-background);
+
+  border: 1px solid var(--resume-border);
+  border-radius: var(--resume-radius);
+}
+
+.resume-page .technical-skill h3 {
+  margin: 0 0 14px;
+
+  color: var(--resume-main);
+
+  font-size: 1.08rem;
+}
+
+.resume-page .technical-skill p {
+  margin: 0;
+
+  color: var(--resume-muted);
+
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.resume-page .education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  padding: 34px;
+
+  background: var(--resume-white);
+
+  border: 1px solid var(--resume-border);
+  border-left: 5px solid var(--resume-accent);
+  border-radius: var(--resume-radius);
+
+  box-shadow: var(--resume-shadow);
+}
+
+.resume-page .education-card h3 {
+  margin: 0;
+
+  color: var(--resume-main);
+
+  font-size: 1.35rem;
+}
+
+.resume-page .education-school {
+  margin: 8px 0 0;
+
+  color: var(--resume-accent);
+
+  font-weight: 700;
+}
+
+.resume-page .education-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+
+  color: var(--resume-muted);
+
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.resume-page .education-details strong {
+  color: var(--resume-secondary);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.resume-page .resume-cta {
+  padding: 105px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--resume-secondary),
+      var(--resume-main)
+    );
+
+  color: var(--resume-white);
+}
+
+.resume-page .resume-cta-content {
+  max-width: 760px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.resume-page .resume-cta .section-label {
+  color: #e6a77e;
+}
+
+.resume-page .resume-cta h2 {
+  margin: 0;
+
+  color: var(--resume-white);
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.resume-page .resume-cta p:not(.section-label) {
+  max-width: 620px;
+  margin: 20px auto 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  line-height: 1.8;
+}
+
+.resume-page .resume-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 30px;
+  padding: 13px 25px;
+
+  color: var(--resume-white);
+  background: var(--resume-accent);
+
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.resume-page .resume-cta-btn:hover {
+  background: #a94f1d;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.resume-page .resume-signature {
+  padding: 70px 0;
+
+  background: var(--resume-background);
+
+  text-align: center;
+}
+
+.resume-page .resume-signature h2 {
+  margin: 0;
+
+  color: var(--resume-main);
+
+  font-size: 2rem;
+}
+
+.resume-page .resume-signature-title {
+  margin: 8px 0 14px;
+
+  color: var(--resume-accent);
+
+  font-weight: 700;
+}
+
+.resume-page .resume-signature p:last-child {
+  max-width: 760px;
+  margin-inline: auto;
+
+  color: var(--resume-muted);
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.resume-page .footer {
+  padding: 28px 0;
+
+  background: var(--resume-main);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 0.85rem;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .resume-page .nav-links {
+    gap: 16px;
+  }
+
+  .resume-page .nav-links > a,
+  .resume-page .nav-dropdown-toggle {
+    font-size: 0.84rem;
+  }
+
+  .resume-page .resume-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .resume-page .resume-hero-card {
+    justify-content: flex-start;
+  }
+
+  .resume-page .technical-skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .resume-page .resume-section {
+    padding: 80px 0;
+  }
+
+  .resume-page .resume-hero {
+    padding: 140px 0 80px;
+  }
+
+  .resume-page .resume-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.3rem);
+  }
+
+  .resume-page .experience-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .resume-page .experience-date {
+    text-align: left;
+  }
+
+  .resume-page .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-page .education-details {
+    align-items: flex-start;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .resume-page .nav {
+    min-height: 72px;
+  }
+
+  .resume-page .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .resume-page .logo {
+    font-size: 1.25rem;
+  }
+
+  .resume-page .nav-dropdown {
+    width: 100%;
+  }
+
+  .resume-page .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .resume-page .dropdown-menu {
+    position: static;
+
+    width: 100%;
+    margin-top: 6px;
+    padding: 4px 0 4px 15px;
+
+    transform: none;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    display: none;
+  }
+
+  .resume-page .nav-dropdown:hover .dropdown-menu,
+  .resume-page .nav-dropdown:focus-within .dropdown-menu {
+    display: block;
+    transform: none;
+  }
+
+  .resume-page .dropdown-menu::before {
+    display: none;
+  }
+
+  .resume-page .dropdown-menu a {
+    color: var(--resume-main);
+  }
+
+  .resume-page .resume-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resume-page .resume-primary-btn,
+  .resume-page .resume-secondary-btn {
+    width: 100%;
+  }
+
+  .resume-page .experience-item {
+    padding: 26px 22px;
+  }
+
+  .resume-page .technical-skills {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .resume-page .container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .resume-page .resume-contact {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .resume-page .resume-hero-card-inner {
+    padding: 28px;
+  }
+
+  .resume-page .skills-list span {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
